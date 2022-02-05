@@ -1,5 +1,7 @@
+import os
 import discord
-import os 
+
+my_secret = os.environ['KEY']
 
 client = discord.Client()
 
@@ -9,10 +11,10 @@ async def on_ready():
   
 @client.event
 async def on_message(message):
-  if message.auther == client.user:
+  if message.author == client.user:
     return
 
   if message.content.startswith('~hello'):
     await message.channel.send('Hello there, I am Shit Head the slave of ethan')
 
-client.run(os.getenv('TOKEN'))
+client.run(os.getenv('KEY'))
