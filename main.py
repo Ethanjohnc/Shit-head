@@ -1,5 +1,7 @@
 import os
 import discord
+import random
+
 
 my_secret = os.environ['KEY']
 
@@ -16,5 +18,22 @@ async def on_message(message):
 
   if message.content.startswith('~hello'):
     await message.channel.send('Hello there, I am Shit Head the slave of ethan')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 client.run(os.getenv('KEY'))
